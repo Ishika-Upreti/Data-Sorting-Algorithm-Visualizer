@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sorting Visualizer</h1>
+
+  <div class="sliders">
+    <label>Array Size:
+      <input type="range" min="10" max="100" value="30" id="sizeSlider" oninput="updateArraySize(this.value)">
+      <span id="sizeValue">30</span>
+    </label>
+
+    <label>Speed:
+      <input type="range" min="1" max="1000" value="100" id="speedSlider" oninput="updateSpeed(this.value)">
+      <span id="speedValue">100</span> ms
+    </label>
+  </div>
+
+  <div class="controls">
+    <button onclick="generateArray()">New Array</button>
+    <button onclick="bubbleSort()">Bubble Sort</button>
+    <button onclick="selectionSort()">Selection Sort</button>
+    <button onclick="insertionSort()">Insertion Sort</button>
+    <button onclick="mergeSortCall()">Merge Sort</button>
+    <button onclick="countingSort()">Counting Sort</button>
+  </div>
+
+  <div id="array-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
